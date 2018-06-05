@@ -36,7 +36,7 @@ export class ProductsviewComponent implements OnInit {
         data => {
           this.productSets[pageNo] = data.products;
           // console.log(this.productSets)
-          if (sessionStorage.getItem('SCROLL_POSITION')) {
+          if (sessionStorage.getItem('SCROLL_POSITION') && parseInt(sessionStorage.getItem('SCROLL_POSITION')) > window.scrollY) {
             setTimeout(() => {
               window.scrollTo(0, parseInt(sessionStorage.getItem('SCROLL_POSITION')));
             })
