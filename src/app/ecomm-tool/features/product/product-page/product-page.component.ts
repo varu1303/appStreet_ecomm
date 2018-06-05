@@ -34,6 +34,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     let variationArray = [];
+    window.scrollTo(0, 0);
 
     this.sub = this.route.params.subscribe(params => {
 
