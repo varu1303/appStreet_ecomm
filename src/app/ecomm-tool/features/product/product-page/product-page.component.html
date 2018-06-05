@@ -5,7 +5,7 @@
     </div>
     <div class="prodDetail-section">
       <p class="boldText" id="name">{{currentProduct.name}}</p>
-      <p class="descText">{{product.desc | descTextFilter:150:showCompDesc}} <span *ngIf="!showCompDesc">...</span></p>
+      <p class="descText">{{product?.desc | descTextFilter:150:showCompDesc}} <span *ngIf="!showCompDesc">...</span></p>
       <p *ngIf="!showCompDesc" class="moreText" (click)="showCompDesc = true">+MORE</p>
       <p *ngIf="showCompDesc" class="moreText" (click)="showCompDesc = false">-LESS</p>
       <hr>

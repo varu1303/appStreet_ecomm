@@ -19,12 +19,6 @@ export class ProductTileComponent implements OnInit {
   @Input() product: Array<details>;
 
   constructor(private router: Router) { 
-  //   this.product = [{
-  //   name: '',
-  //   images: [],
-  //   sale_price: 0,
-  //   _id: ''
-  // }]
   }
 
   ngOnInit() {
