@@ -12,8 +12,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   private sub: any;
   public product: {
-    images: Array<any>,
-    desc: String
+    images: Array<any>;
+    desc: String;
   };
   public attributes: Array<any>;
   private options: Array<any>;
@@ -29,7 +29,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   public showCompDesc = false;
 
   constructor(private route: ActivatedRoute, private callTo: ProductdetailService, private router: Router) {
-    this.product = { images: [] };
+    this.product = { images: [''], desc: '' };
   }
 
   ngOnInit() {
