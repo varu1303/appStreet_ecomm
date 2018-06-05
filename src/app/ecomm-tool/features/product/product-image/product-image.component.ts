@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductImageComponent implements OnInit {
 
   @Input() imgLink: Array<any>;
-  private inFocus = 0;
+  public inFocus = 0;
 
   constructor() { }
 

@@ -8,7 +8,12 @@ import {Router} from '@angular/router';
 })
 export class ProductTileComponent implements OnInit {
 
-  @Input() product: Array<any>;
+  @Input() product: Array<{
+    images: any,
+    sale_price: any,
+    name: any,
+    _id: any
+  }>;
 
   constructor(private router: Router) { }
 

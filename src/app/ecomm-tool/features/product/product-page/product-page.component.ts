@@ -11,18 +11,24 @@ import { ProductdetailService } from './../services/productdetail.service';
 export class ProductPageComponent implements OnInit, OnDestroy {
 
   private sub: any;
-  private product = {
-    images: []
+  public product: {
+    images?: Array<any>
   };
   private attributes: Array<any>;
   private options: Array<any>;
-  private currentProduct = {};
+  public currentProduct = {
+    name: '',
+    mark_price: 0,
+    sale_price: 0,
+    sale_msg: ''
+  };
   private selectedIds: Array<any>;
   private variation: Array<any>;
-  private quantity = 1;
+  public quantity = 1;
   public showCompDesc = false;
 
-  constructor(private route: ActivatedRoute, private callTo: ProductdetailService, private router: Router) { 
+  constructor(private route: ActivatedRoute, private callTo: ProductdetailService, private router: Router) {
+    this.product = { images: [] };
   }
 
   ngOnInit() {
