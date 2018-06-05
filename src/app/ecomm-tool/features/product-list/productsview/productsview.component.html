@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row" *ngFor="let page of objectKeys(productSets)">
+      <app-product-tile *ngFor="let product of productSets[page]" 
+                        class="col-xs-6 col-lg-3"
+                        [product]="product">
+      </app-product-tile>
+  </div>
+  <app-loadmore (loadNextPage)="loadNextPage()"></app-loadmore>
+</div>

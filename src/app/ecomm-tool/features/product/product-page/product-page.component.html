@@ -1,0 +1,35 @@
+<div class="prod-holder">
+  <div class="section-container">
+    <div class="prodImage-section">
+      <app-product-image [imgLink]="product.images"></app-product-image>
+    </div>
+    <div class="prodDetail-section">
+      <p class="boldText" id="name">{{currentProduct.name}}</p>
+      <p class="descText">{{product.desc | descTextFilter:150:showCompDesc}} <span *ngIf="!showCompDesc">...</span></p>
+      <p *ngIf="!showCompDesc" class="moreText" (click)="showCompDesc = true">+MORE</p>
+      <p *ngIf="showCompDesc" class="moreText" (click)="showCompDesc = false">-LESS</p>
+      <hr>
+      <p class="boldText">Rs {{currentProduct.sale_price | number : '1.2-2'}} <span class="markedPrice descText"> Rs {{currentProduct.mark_price | number : '1.2-2'}}</span></p>
+      <p class="offerText">You save Rs {{currentProduct.mark_price - currentProduct.sale_price  | number : '1.2-2'}} ({{currentProduct.sale_msg}})</p>
+      <p class="descText">Local taxes included (where applicable)</p>
+      <hr>
+      <app-product-attribute *ngFor="let attribute of attributes" 
+                            [name]="attribute.name" 
+                            [options]="getAttrOpts(attribute._id)"
+                            [selectedId]="getSelectedId(attribute._id)"
+                            (newOption)="pickFromVariation($event)"> 
+      </app-product-attribute>
+      <p class="quantTitle">Quantity</p>
+      <p class="quantity">
+        <span class="quantBtn" (click)="changeQuantity(false)">-</span>
+        <span class="quantCnt">{{quantity}}</span>
+        <span class="quantBtn" (click)="changeQuantity(true)">+</span>
+      </p>
+      <div class="addBtnHolder">
+        <p class="addBtn">Add To Cart</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+<div class="banner-holder">
+  <div class="leftHold" (click)="decInFocus()">
+      <span class="left"></span>
+  </div>
+  <img [src]="imgLink[inFocus]" class="bannerImg">
+  <div class="rightHold" (click)="incInFocus()">
+    <span class="right"></span>
+  </div>
+</div>
+<div class="snapshots">
+  <app-product-snaps *ngFor="let img of imgLink; let i = index" 
+      (click)="changeInFocus(i)"
+      [ngClass]="{'inFocus': inFocus === i}"
+      [link]="imgLink[i]">
+  </app-product-snaps>
+</div>

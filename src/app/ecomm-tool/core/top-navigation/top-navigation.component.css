@@ -1,0 +1,61 @@
+.topnav {
+  border-bottom: 2px solid #bfb7b7;
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  /* width: 780px; */
+}
+
+.navholder {
+  display: flex;
+  margin: 0 auto;
+}
+
+.topnav p {
+  padding: 10px;
+}
+
+.homeP {
+  outline: 0;
+}
+
+.topnav nav {
+  flex: 1;
+}
+
+nav {
+  text-align: right;
+  padding-top: 10px;
+}
+
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.navimg {
+  display: none;
+}
+
+.navimg img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .navholder {
+    width: 780px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navOpt {
+    display: none;
+  }
+  .navimg {
+    display: block;
+  }
+}
+

@@ -1,0 +1,9 @@
+<p class="boldText">{{options.length}} {{name}} available</p>
+<div class="optionHolder">
+  <p *ngFor="let option of options" 
+      [ngClass]="{'selected': option._id === selectedId}"
+      (click)="changeSelectedOption(option._id)">
+      <!-- <input type="color" value="option.name" *ngIf="name === 'Colour'">  -->
+      {{option.name}}
+  </p>
+</div>

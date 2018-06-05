@@ -1,0 +1,134 @@
+.prodHolder {
+  width: 100vw;
+}
+
+.section-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.prodImage-section {
+  flex: 1;
+  padding: 0px;
+}
+
+.prodDetail-section {
+  flex: 1;
+  padding-left: 10px;
+}
+
+#name::after {
+    content: ""; 
+    display: block; 
+    width: 10%;
+    padding-top: 5px;
+    border-bottom: 3px solid #18BC9C; 
+}
+
+.boldText {
+  font-weight: bolder;
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+.moreText {
+  font-weight: bolder;
+  margin-top: 8px;
+  font-size: 1.4rem;
+  color: #18BC9C;
+}
+
+.quantTitle {
+  font-weight: bolder;
+  margin-top: 15px;
+  font-size: 1.4rem;  
+}
+
+.descText {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.offerText {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #18BC9C;
+}
+
+.markedPrice {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.quantity {
+  border: 1px solid #18BC9C;
+  display: inline-block;
+  /* line-height: 0px; */
+}
+
+.quantBtn {
+  color: #18BC9C;
+  padding: 0 10px 0 10px;
+  line-height: 0px;
+}
+
+.quantCnt {
+  color: white;
+  background-color: #18BC9C;
+  padding: 0 15px 0 15px;
+  line-height: 0px;
+}
+
+.addBtnHolder {
+  margin-top: 15px;
+}
+
+.addBtn {
+  width: 100%;
+  border-radius: 2px;
+  background-color: #18BC9C;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 35px auto;
+  height: 0;
+  width: 100%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  
+.section-container {
+  width: 80%;
+  display: flex;
+  }
+
+  
+.prodImage-section {
+  padding: 30px;
+}
+
+  .prodDetail-section {
+    margin-top: 10vh;
+  }
+
+  .addBtnHolder {
+    text-align: left;
+  }
+
+  .addBtn {
+    width: 70%;
+  }
+}

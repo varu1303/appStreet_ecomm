@@ -1,0 +1,13 @@
+<div (click)="goToProductPage(product._id)" class="tile">
+    <div class="imgHolder">
+      <img [src]="product.images[0]">
+    </div>
+    <div class="prodInfo">
+      <p>
+        {{product.name}}
+      </p>
+      <p>
+        Rs {{product.sale_price | number : '1.2-2'}}
+      </p>
+    </div>
+</div>

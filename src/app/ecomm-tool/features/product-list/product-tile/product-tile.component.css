@@ -1,0 +1,37 @@
+.tile {
+  min-height: 40vh;
+  margin-top: 4vh;
+}
+
+.imgHolder {
+  text-align: center;
+  margin-bottom: 3px;
+  padding: 5px;
+  border-bottom: 1px solid #bfb7b7;
+}
+.imgHolder img {
+  width: 80%;
+  height: 20vh;
+}
+
+.prodInfo {
+  padding: 5px;
+}
+
+.prodInfo p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bolder;
+  margin-bottom: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .prodInfo p {
+    font-size: 10px;
+  }
+
+  .imgHolder img {
+    width: 85%;
+  }
+}
+
