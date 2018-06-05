@@ -12,7 +12,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   private sub: any;
   public product: {
-    images?: Array<any>
+    images: Array<any>,
+    desc: String
   };
   public attributes: Array<any>;
   private options: Array<any>;

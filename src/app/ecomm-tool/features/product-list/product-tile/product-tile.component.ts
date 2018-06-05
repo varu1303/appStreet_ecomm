@@ -16,7 +16,7 @@ interface details {
 export class ProductTileComponent implements OnInit {
 
 
-  @Input() product: Array<details>;
+  @Input() product: details;
 
   constructor(private router: Router) { 
   }
