@@ -118,8 +118,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
         found = false;
     })
     if (found) {
-      // To resolve BACK button issue.....! 06062018
-    //  this.router.navigateByUrl(`/product/${product._id}`)
+     this.router.navigateByUrl(`/product/${product._id}`)
     }
   })
  }
